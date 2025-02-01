@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg1.jpeg);
+    background-size: 1000px;
+    background-position: center center;
+
+
+}
+
+.blurred {
+    filter: blur(5px);  /* You can adjust the blur level */
+    pointer-events: none; /* Prevent interaction with blurred elements */
+}
+
+.paper {
+    
+    position: absolute;
+    background-image: url(paper1.webp);
+    background-size: 500px;
+    background-position: center center;
+    padding: 20px 100px;
+    transform: rotate(-5deg);
+    box-shadow: 1px 15px 20px 0px rgb(0, 0, 0 , 0.5)
+
+}
+
+.paper.heart {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    border-radius: 100%;
+}
+
+
+.paper.image {
+    padding: 10px;
+}
+
+.paper.image p{
+    font-size: 35px;
+}
+
+img {
+    max-height: 450px;
+    width: 100%;
+    user-select: none;
+}
+
+.paper.heart::after {
+    content: "";
+    background-image: url(heart1.webp.png);
+    width: 102.5%;
+    height: 110%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 200px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+p{
+    font-family: 'zeyada';
+    font-size: 30px;
+    color: rgb(0, 0, 100);
+    opacity: 0.75;
+    user-select: none;
+}
